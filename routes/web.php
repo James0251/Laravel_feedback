@@ -20,13 +20,9 @@ Route::get('/contact', function () {
 })->name('contact');
 
 //Обработчик для тестовой формы
-Route::post('/contact/submit', function () {
-    dd(Request::all());
 //    Вызываю функцию name() только после того, как функция post будет завершена
-})->name('contact-form');
+Route::post('/contact/submit', 'ContactController@submit')->name('contact-form');
 
 //Обработчик для моей формы
-Route::post('/form/submit', function () {
-    dd(Request::all());
 //    Вызываю функцию name() только после того, как функция post будет завершена
-})->name('feedback-form');
+Route::post('/form/submit', 'FormController@submit')->name('feedback-form');
