@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'About Us')
+@section('title', 'Feedback Form')
 
 
-    <form action="{{ route('about-form') }}" method="POST">
+    <form action="{{ route('feedback-form') }}" method="POST">
         @csrf
         <table>
             <tr>

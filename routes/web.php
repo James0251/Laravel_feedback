@@ -7,24 +7,26 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('home');
-});
+})->name('home');
 
-Route::get('/about', function () {
-    return view('about');
-});
+//Роут для моей формы
+Route::get('/form', function () {
+    return view('form');
+})->name('form');
 
+//Роут для тестовой формы
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 
 //Обработчик для тестовой формы
 Route::post('/contact/submit', function () {
-    return "Okey";
+    dd(Request::all());
 //    Вызываю функцию name() только после того, как функция post будет завершена
 })->name('contact-form');
 
 //Обработчик для моей формы
-Route::post('/about/submit', function () {
-    return "Okey";
+Route::post('/form/submit', function () {
+    dd(Request::all());
 //    Вызываю функцию name() только после того, как функция post будет завершена
-})->name('about-form');
+})->name('feedback-form');
