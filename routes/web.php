@@ -16,3 +16,13 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+//Обработчик для тестовой формы
+Route::post('/contact/submit', function () {
+    return "Okey";
+});
+
+//Обработчик для моей формы
+Route::post('/about/submit', function () {
+    return "Okey";
+});
