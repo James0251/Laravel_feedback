@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class FormController extends Controller
 {
-    public function submit()
+//    Чтобы получить все данные из формы, необходимо в параметрах функции указать
+    public function submit(Request $request)
     {
-        return "Okey";
+//        dd($request);   //ВСЕ данные из формы
     }
 }
