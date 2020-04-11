@@ -3,7 +3,7 @@
 @section('title', 'About Us')
 
 
-    <form action="/about/submit" method="POST">
+    <form action="{{ route('about-form') }}" method="POST">
         @csrf
         <table>
             <tr>
