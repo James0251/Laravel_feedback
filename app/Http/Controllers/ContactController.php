@@ -36,7 +36,7 @@ class ContactController extends Controller
         $contact->save();
 
 //        выполним переадресацию
-        return redirect()->route('home');
+        return redirect()->route('home')->with(session('success', 'Все данные успешно записаны в MySQL'));
 
     }
 }

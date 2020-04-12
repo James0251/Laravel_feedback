@@ -4,7 +4,8 @@
 
 @section('content')
     <h1>Главная страница</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti fuga omnis repellat tempore temporibus. Dolorum explicabo, voluptas. Animi distinctio dolore dolorem dolorum eos, illo necessitatibus placeat saepe sed voluptate!</p>
+    {{--    тут будем выводить сообщения об ошибках или правильных операциях--}}
+    @include('inc.contact_messages')
 @endsection
 
 

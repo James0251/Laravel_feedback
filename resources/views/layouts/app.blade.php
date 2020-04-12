@@ -20,6 +20,7 @@
 @endif
 
     <div class="container mt-5">
+
         <div class="row">
             <div class="col-8">
                 {{--устанавливаем связь с дочерними файлами для добавления данных в <body>--}}

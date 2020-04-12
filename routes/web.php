@@ -26,3 +26,11 @@ Route::post('/contact/submit', 'ContactController@submit')->name('contact-form')
 //Обработчик для моей формы
 //    Вызываю функцию name() только после того, как функция post будет завершена
 Route::post('/form/submit', 'FormController@submit')->name('feedback-form');
+
+
+Route::get('/monday', function (){
+    return view('/weekDays/monday');
+});
+Route::get('/thursday', function (){
+    return view('thursday');
+});
