@@ -39,4 +39,22 @@ class ContactController extends Controller
         return redirect()->route('home')->with(session('success', 'Все данные успешно записаны в MySQL'));
 
     }
+
+    public function allData()
+    {
+//        Создаю новый обьект и беру из БД всё!!!
+//        $contact = new Contact();   dd($contact->all());
+//        Можно записать проще:       dd(Contact::all());
+//        Чтобы передавать данные в шаблон, нам необходимо использовать view, которая вызывает сам шаблон.
+
+//        Выборка из БД
+        $contact = new Contact();
+//
+//        return view('messages', ['data' => $contact->orderBy('id', 'desk')->get()]);
+
+
+//        return view('messages', [      //тут выводятся вообще все данные
+//            'data' => Contact::all()
+//        ]);
+    }
 }

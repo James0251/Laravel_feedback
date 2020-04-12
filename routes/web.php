@@ -20,10 +20,12 @@ Route::get('/contact', function () {
 })->name('contact');
 
 //Обработчик для тестовой формы
+Route::get('/contact/all', 'ContactController@allData')->name('contact-data');
 //    Вызываю функцию name() только после того, как функция post будет завершена
 Route::post('/contact/submit', 'ContactController@submit')->name('contact-form');
 
 //Обработчик для моей формы
+Route::get('/form/all', 'FormController@allData')->name('feedback-data');
 //    Вызываю функцию name() только после того, как функция post будет завершена
 Route::post('/form/submit', 'FormController@submit')->name('feedback-form');
 
