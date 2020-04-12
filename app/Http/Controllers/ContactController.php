@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -21,6 +22,21 @@ class ContactController extends Controller
 //        ]);
 
 //        Для валидации создал ContactRequest в папке app/Http/Requests
+
+        $contact = new Contact();
+//        Обращаемся к обьекту $contact, далее обращаемся к нужному полю name и в него мы будем устанавливать
+//        $request, далее через функцию input мы получаем определенные значения
+        $contact->name = $request->input('name');
+        $contact->email = $request->input('email');
+        $contact->subject = $request->input('subject');
+        $contact->message = $request->input('message');
+
+//        чтобы добавить значения в БД, необходимо обратиться к обьекту $contact и через него обратитьс
+//        к функции save()
+        $contact->save();
+
+//        выполним переадресацию
+        return redirect()->route('home');
 
     }
 }
