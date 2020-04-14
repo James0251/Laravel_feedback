@@ -24,7 +24,7 @@
                 <th class="name">Ваш телефон:</th> <td class="point"><input type="text" name="phone" size="35" ></td>
             </tr>
             <tr>
-                <th class="name">Вы уже пользовались нашими услугами?</th> <td class="point"> Да:<input type="checkbox" value="Да" name="call">  Нет:<input type="checkbox" value="Нет" name="call"></td>
+                <th class="name">Вы уже пользовались нашими услугами?</th> <td class="point"> Да:<input type="checkbox" value="Да" name="coll">  Нет:<input type="checkbox" value="Нет" name="coll"></td>
             </tr>
             <tr>
                 <th class="name">Ваш e-mail:</th> <td class="point"> <input type="text" name="website" size="35" ></td>
@@ -54,7 +54,7 @@
             </tr>
             <tr>
                 <th class="name">Выберите месяц для записи:</th> <td class="point">
-                    <select onchange="window.location.href=this.options[this.selectedIndex].value">
+                    <select name="month" onchange="window.location.href=this.options[this.selectedIndex].value">
                         <option VALUE="http://localhost:8000?month=01">Январь</option>
                         <option VALUE="http://localhost:8000?month=02">Февраль</option>
                         <option VALUE="http://localhost:8000?month=03">Март</option>
@@ -70,12 +70,19 @@
                     </select>
                 </td>
             </tr>
+            @if($selectedDate)
+                <input type="hidden" name="day" value="{{ $selectedDate->format('d-F') }}">
+                <input type="hidden" name="time" value="{{ $selectedDate->format('H:i') }}">
             <tr>
-                <th class="name">Ваш приём назначен на: </th> <td class="point"><output>result:</output></td>
+                <th class="name">Ваш приём назначен на: </th> <td class="point"><output><u>{{ $selectedDate->format('d-F'.' в '.'H:i') }}</u></output></td>
             </tr>
+
+            @endif
 
             <tr>
                 <td class="send" colspan=2 align="left"> <input type="reset" value="Очистить"><input type="submit" value="Отправить">
                 </td></tr>
         </table>
     </form>
+
+

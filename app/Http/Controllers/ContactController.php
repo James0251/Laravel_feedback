@@ -50,7 +50,7 @@ class ContactController extends Controller
 //        Выборка из БД
         $contact = new Contact();
 //
-//        return view('messages', ['data' => $contact->orderBy('id', 'desk')->get()]);
+        return view('messages', ['data' => $contact->orderBy('id', 'desk')->get()]);
 
 
 //        return view('messages', [      //тут выводятся вообще все данные

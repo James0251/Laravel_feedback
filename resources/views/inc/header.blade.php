@@ -5,6 +5,7 @@
         <a class="p-2 text-dark" href="{{ route('form') }}" class="p-2 text-dark">Моя форма</a>
         <a class="p-2 text-dark" href="{{ route('contact') }}" class="p-2 text-dark">Тестовая форма</a>
         <a class="p-2 text-dark" href="{{ route('contact-data') }}" class="p-2 text-dark">Сообщения</a>
+        <a class="p-2 text-dark" href="{{ route('admin-form') }}" class="p-2 text-dark">Админка</a>
 
 {{--   все поля {{ route('') }} были такого вида: /contact--}}
 

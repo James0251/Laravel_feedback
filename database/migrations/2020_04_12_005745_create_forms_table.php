@@ -17,7 +17,7 @@ class CreateFormsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('phone')->unique();
-            $table->string('coll');
+            $table->string('coll')->nullable();
             $table->string('email')->unique();
             $table->string('specialist');
             $table->string('service');
